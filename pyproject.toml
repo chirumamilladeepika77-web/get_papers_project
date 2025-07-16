@@ -1,0 +1,23 @@
+# pyproject.toml
+
+[tool.poetry]
+name = "get-papers-list-module"
+version = "0.1.0"
+description = "A module to fetch and filter PubMed research papers for authors with non-academic affiliations."
+authors = ["Deepika Chirumamilla deepikachirumamilla77@gmail.com"]
+readme = "README.md"
+packages = [{include = "get_papers_list"}]
+repository = "https://github.com/chirumamilladeepika77-web/get_papers_project.git"
+
+[tool.poetry.dependencies]
+python = "^3.12.9"
+requests = "^2.31.0"
+typer = {extras = ["rich"], version = "^0.9.0"}
+lxml = "^5.1.0"
+
+[tool.poetry.scripts]
+get-papers-list = "cli.main:app"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
